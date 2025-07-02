@@ -26,11 +26,11 @@ on:
       run_job:
         type: boolean
         required: false
-        description: "Run specific job"
+        description: "Run Specific job"
       custom_message:
         type: string
         required: true
-        description: "Enter the custom message"
+        description: "Enter a custom message"
 
 jobs:
   job1:
