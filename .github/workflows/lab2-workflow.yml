@@ -1,8 +1,4 @@
-Add an input property to the workflow_dispatch event.
-a) Name of the property - run_job
-b) Type - boolean
-c) Required - false
-d) Description - Run Specific Job
+
 
 name: Exploring Workflow Dispatch Trigger
 
