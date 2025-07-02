@@ -1,3 +1,15 @@
+#   i. Name: Printing run-job boolean value
+#   ii. Execute an echo command to print the run-job input property of workflow_dispatch
+
+# b. Make sure the step has an if condition with this expression - inputs.run-job == 'true' or inputs.run-job
+#   i. This if condition makes sure that this step only executes when the run-job input parameter is checked/enabled
+
+# Commit the change and Trigger the workflow manually
+
+# a) In the workflow_dispatch form,
+#   i. Enable Run Specific Job checkbox
+#   ii. Enter a message - Executing KodeKloud Lab 2
+
 
 
 name: Exploring Workflow Dispatch Trigger
@@ -5,7 +17,7 @@ name: Exploring Workflow Dispatch Trigger
 on:
   workflow_dispatch:
     inputs:
-      run_job:
+      run-job:
         type: boolean
         required: false
         description: "Run Specific Job"
@@ -24,3 +36,6 @@ jobs:
     steps:
       - name: Printing Custom Message
         run: echo ${{ inputs.custom_message }}
+      - name: Printing run-job boolean value
+        if: inputs.run-job == 'true' || inputs.run-job
+        run: echo ${{ inputs.run-job}}
