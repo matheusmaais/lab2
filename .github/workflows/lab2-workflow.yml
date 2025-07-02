@@ -1,22 +1,8 @@
-# Add an input property to the workflow_dispatch event.
-# a) Name of the property - run_job
-# b) Type - boolean
-# c) Required - false
-# d) Description - Run Specific Job
-# Add another input property to the workflow_dispatch event.
-# a) Name of the property - custom_message
-# b) Type - string
-# c) Required - true
-# d) Description - Enter a custom message
-# Add a new job with the below config
-# a) Job Name - job2
-# b) runs-on - ubuntu-latest
-# c) Add a single-step
-#   i. Name: Printing Custom Message
-#   ii. Execute an echo command to print the custom_message input property of workflow_dispatch
-# Commit the change and Trigger the workflow manually
-# a) In the workflow_dispatch form,
-#   i. Enter a message - Executi
+Add an input property to the workflow_dispatch event.
+a) Name of the property - run_job
+b) Type - boolean
+c) Required - false
+d) Description - Run Specific Job
 
 name: Exploring Workflow Dispatch Trigger
 
@@ -26,7 +12,7 @@ on:
       run_job:
         type: boolean
         required: false
-        description: "Run Specific job"
+        description: "Run Specific Job"
       custom_message:
         type: string
         required: true
